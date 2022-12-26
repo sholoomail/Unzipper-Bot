@@ -20,7 +20,7 @@ from config import Config
 
 # Callbacks
 @Client.on_callback_query()
-async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
+await async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
     if query.data == "megoinhome":
         await query.edit_message_text(text=Messages.START_TEXT.format(query.from_user.mention), reply_markup=Buttons.START_BUTTON)
     
