@@ -49,7 +49,7 @@ async def clean_ma_files(client: Client, message: Message):
 
 @Client.on_message(filters.incoming & filters.private & filters.regex(https_url_regex) | filters.document)
 async def extract_dis_archive(client: Client, message: Message):
-    unzip_msg = await message.reply("`Processing ⚙️...`", reply_to_message_id=message.message_id)
+    unzip_msg = await message.reply("`Processing ⚙️...`", reply_to_message_id=message.id)
     user_id = message.from_user.id
     download_path = f"{Config.DOWNLOAD_LOCATION}/{user_id}"
     if os.path.isdir(download_path):
