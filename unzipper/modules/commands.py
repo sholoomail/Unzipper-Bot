@@ -50,7 +50,7 @@ async def clean_ma_files(client: Client, message: Message):
 @Client.on_message(filters.incoming & filters.private & filters.regex(https_url_regex) | filters.document)
 async def extract_dis_archive(client: Client, message: Message):
     unzip_msg = await message.reply("`Processing ⚙️...`", reply_to_message_id=message.id)
-    user_id = message.from_user.id
+    user_id = message.forward_from.id
     download_path = f"{Config.DOWNLOAD_LOCATION}/{user_id}"
     if os.path.isdir(download_path):
         return await unzip_msg.edit("`Already one process is going on, Don't spam you idiot 😑!` \n\nWanna Clear You Files from my server? Then just send **/clean** command!")
