@@ -1,0 +1,25 @@
+services:
+  - type: worker
+    name: Unzipper-Bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m unzipper
+    repo: https://github.com/sholoomail/Unzipper-Bot.git
+    branch: main
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: APP_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_OWNER
+        sync: false
+      - key: MONGODB_URL
+        sync: false
+      - key: LOGS_CHANNEL
+        sync: false
+      - key: DB_CHANNEL
+        sync: false
+      - key: GOFILE_TOKEN
+        sync: false
