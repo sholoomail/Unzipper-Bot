@@ -58,6 +58,12 @@ Also don't forget to check [changelog](CHANGELOG.md) 😉
 
 
 ## Deploy 👀
+
+### Deploy To Render (Paid)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?)
+
+
 Deploying is easy 🤫! You can deploy this bot in Heroku or in a linux VPS ♥️! **Star 🌟 Fork 🍴 and Deploy**
 
 ### With Heroku
